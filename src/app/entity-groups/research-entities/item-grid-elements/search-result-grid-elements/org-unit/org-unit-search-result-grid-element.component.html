@@ -47,12 +47,12 @@
         <span style="color:#530a86 !important ;font-size: 15px;font-weight: 600;" [innerHtml]="firstMetadataValue('organization.relation.ispartof') | kwareTranslate"></span>
 
       </div>
-     <div *ngIf="dso.hasMetadata('organization.foundingDate')"
+     <!-- <div *ngIf="dso.hasMetadata('organization.foundingDate')"
          class="item-date card-text text-muted">
         <ds-truncatable-part [id]="dso.id" [minLines]="1" [isGridview]="true">
           <span [innerHTML]="firstMetadataValue('organization.foundingDate')"></span>
         </ds-truncatable-part>
-     </div>
+     </div> -->
      <div *ngIf="dso.hasMetadata('organization.address.addressCountry')"
          class="item-location card-text">
         <ds-truncatable-part [id]="dso.id" [minLines]="1" [isGridview]="true">

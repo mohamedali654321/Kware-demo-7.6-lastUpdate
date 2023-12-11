@@ -69,26 +69,28 @@ export class PublictaionCountComponent {
           });
         });
       });
-    } else if (this.dso.firstMetadataValue('dspace.entity.type') === 'Person') {
+    } 
+    else if (this.dso.firstMetadataValue('dspace.entity.type') === 'Person') {
       this.dso.metadataAsList.filter((md) => {
         md &&
         (md.key?.includes(
           'relation.isPublicationOf' +
             this.dso.firstMetadataValue('dspace.entity.type')
-        ) ||
-          md.key?.includes('relation.isPublicationOfAuthor') ||
-          md.key?.includes('relation.isPublicationOfAdvisors')) &&
+        ) ||         
+          md.key?.includes('relation.isPublicationOf')) &&
         !md.key?.includes('latestForDiscovery')
           ? this.data.next(this.data.getValue().concat([md.uuid]))
           : null;
       });
-    } else {
+    } 
+    else {
       this.dso.metadataAsList.filter((md) => {
         md &&
-        md.key?.includes(
+        (md.key?.includes(
           'relation.isPublicationOf' +
             this.dso.firstMetadataValue('dspace.entity.type')
-        ) &&
+        ) ||         
+          md.key?.includes('relation.isPublicationOf')) &&
         !md.key?.includes('latestForDiscovery')
           ? this.data.next(this.data.getValue().concat([md.uuid]))
           : null;

@@ -49,39 +49,60 @@
         [id]="dso.id"
         [minLines]="2"
         type="h4"
-        [isGridview]="true"
+         
       >
         <!-- <h4 class="card-title" [innerHTML]="convertComma(dsoTitle)"></h4> -->
-        <h4 class="card-title">
+        <h4 class="card-title d-flex">
           <a [routerLink]="[itemPageRoute]">{{ dsoTitle | kwareTranslate }}</a>
+        
+            <a *ngIf="dso.hasMetadata('person.identifier.orcid')" href="https://sandbox.orcid.org/{{firstMetadataValue('person.identifier.orcid')}}"><img style="width: 22px;    margin-right: 10px;" _ngcontent-dspace-angular-c659="" placement="top" alt="orcid-logo" src="https://dspacecris7.4science.cloud/assets/images/orcid.logo.icon.svg" class="orcid-icon ng-star-inserted"></a>
+        
           <!-- <ds-publictaion-count style="font-size: 16px !important;"  [dso]="dso"></ds-publictaion-count> -->
         </h4>
       </ds-truncatable-part>
-      <div
+     
+      <!-- <div
         *ngIf="dso.hasMetadata('person.email')"
         class="item-email card-text text-muted"
       >
-        <ds-truncatable-part [id]="dso.id" [minLines]="1" [isGridview]="true">
+        <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
           <span [innerHTML]="firstMetadataValue('person.email')"></span>
         </ds-truncatable-part>
-      </div>
+      </div> -->
       <div
         *ngIf="dso.hasMetadata('person.jobTitle')"
         class="item-jobtitle card-text"
       >
-        <ds-truncatable-part [id]="dso.id" [minLines]="1" [isGridview]="true">
+        <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
           <!-- kware-edit kwareTranslatePipe -->
           <span
             [innerHTML]="firstMetadataValue('person.jobTitle') | kwareTranslate"
           ></span>
         </ds-truncatable-part>
       </div>
-
+      <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
+        <div *ngIf="dso.allMetadata(['person.contributor.other']).length > 0">
+          <span style="color: #2666ab !important ;font-size: .9rem;font-weight:normal;" [innerHtml]="firstMetadataValue('person.contributor.other') | kwareTranslate"></span>
+  
+        </div>
+      </ds-truncatable-part>
+      <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
+        <div *ngIf="dso.allMetadata(['organization.childLegalName']).length > 0">
+          <span style="color: #2666ab !important ;font-size: .9rem;font-weight:normal;" [innerHtml]="firstMetadataValue('organization.childLegalName') | kwareTranslate"></span>
+  
+        </div>
+      </ds-truncatable-part>
+      <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
+        <div *ngIf="dso.allMetadata(['place.legalName']).length > 0">
+          <span style="color: #2666ab !important ;font-size: .9rem;font-weight:normal;" [innerHtml]="firstMetadataValue('place.legalName') | kwareTranslate"></span>
+  
+        </div>
+      </ds-truncatable-part>
       <div
         *ngIf="dso.hasMetadata('person.jobTitle.description')"
         class="item-jobtitle card-text"
       >
-        <ds-truncatable-part [id]="dso.id" [minLines]="1" [isGridview]="true">
+        <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
           <!-- kware-edit kwareTranslatePipe -->
           <span
             [innerHTML]="
@@ -112,7 +133,7 @@
           ></div>
         </span>
       </div>
-      <!-- <ds-truncatable-part [id]="dso.id" [minLines]="3" [isGridview]="true">
+      <!-- <ds-truncatable-part [id]="dso.id" [minLines]="3"  >
           <span [innerHTML]="removeMarkdown(firstMetadataValue('person.description.biography') | kwareTranslate)"></span>
         </ds-truncatable-part> -->
       <!-- </p> -->

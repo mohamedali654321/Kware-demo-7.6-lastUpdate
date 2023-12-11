@@ -27,6 +27,7 @@ export class PublicationCategoryComponent implements OnInit, OnDestroy {
     'All': { icon: 'fa-solid fa-book-open' },
     'Article | مقال': { icon: 'fa-solid fa-newspaper' },
     'Book | كتاب': { icon: 'fa-solid fa-book' },
+    'Translated Book | كتاب مترجم': { icon: 'fa-solid fa-book' },
     'Image | صورة': { icon: 'fa-solid fa-image' },
     'Research and Studies | بحث ودراسات': { icon: 'fa-solid fa-magnifying-glass' },
     'Research | بحث': { icon: 'fa-solid fa-magnifying-glass' },

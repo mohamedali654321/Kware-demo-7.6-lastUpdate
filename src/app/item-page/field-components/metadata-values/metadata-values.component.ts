@@ -117,7 +117,7 @@ export class MetadataValuesComponent implements OnChanges {
        if (this.link === 'advisoralternative') {this.link = 'advisor';}
   
          this.check = this.link === 'abstract' || this.link === 'citation' || this.link === 'description' || this.link === 'biography' || this.link === 'isbn' || this.link === 'ddc' || this.link === 'papersnumber' || this.link === 'report' || this.link === 'budget'  || this.link === 'acronym' || this.link === 'ownershipFundingInfo' 
-          || this.link === 'linesnumber' || this.link === 'dimensions' || this.link === 'introduction' || this.link === 'conclusion'  || this.link === 'note'  || this.link === 'tableofcontents'
+          || this.link === 'linesnumber' || this.link === 'dimensions' || this.link === 'introduction' || this.link === 'conclusion'  || this.link === 'note'  || this.link === 'tableofcontents' || this.link === 'isbn' 
           || this.link === 'usagerestrictions' || this.link === 'maintenance' || this.link === 'usagerestrictions' || this.link === 'isrelated' || this.link === 'statementofresponsibility' || this.link === 'isversionof'  || this.link === 'jobTitleDescription'  || this.link === 'about' || this.link === 'issuedhijri' || this.link === 'title' || this.link === 'name' || this.link === 'telephone' || this.link ==='openingHoursSpecification' ||this.link ==='address' || this.link === 'organizationFoundingDate' || this.link === 'journal-issn' || this.link === 'issn' || this.link ===  'use' ||
            this.link === 'volume' || this.link === 'number' || this.link === 'journal-title' || this.link === 'birthDateHijri' || this.link === 'deathDateHijri' || this.link === 'primaryContactAddress' || this.link === 'technicalContactAddress'  ? false : true;
   

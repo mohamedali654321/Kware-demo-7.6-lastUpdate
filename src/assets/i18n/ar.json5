@@ -6695,5 +6695,36 @@
    "admin.metadata-import.page.toggle.url": "URL",
 
    "admin.metadata-import.page.urlMsg": "أدخل عنوان url الخاص بملف ZIP للاستيراد",
+
+   'item.page.isbn':'ردمك',
+   'item.page.translator':'المترجمين',
+   'item.page.reviewer':'المراجعين',
+   'item.page.presenter':'المقدمين',
+
+   "search.filters.applied.f.translator": "المترجم",
+   "search.filters.applied.f.reviewer": "المراجع",
+   "search.filters.applied.f.presenter": "المقدم",
+
+   'item.page.relationships.isPublisherOfPublication':'المنشورات',
+   'relationships.isPresenterOf.Person':'المقدمين',
+   'relationships.isReviewerOf.Person':'المراجعين',
+    'relationships.isTranslatorOf.Person':'المترجمين',
+
+"submission.sections.describe.relationship-lookup.title.isTranslatorOfPublication":"المترجمين",
+"submission.sections.describe.relationship-lookup.search-tab.tab-title.isTranslatorOfPublication":"المترجمين المحليين ({{ count }})",
+
+"submission.sections.describe.relationship-lookup.title.isReviewerOfPublication":"المراجعين",
+"submission.sections.describe.relationship-lookup.search-tab.tab-title.isReviewerOfPublication":"المراجعين المحليين ({{ count }})",
+
+"submission.sections.describe.relationship-lookup.title.isPresenterOfPublication":"المقدمين",
+"submission.sections.describe.relationship-lookup.search-tab.tab-title.isPresenterOfPublication":"المقدمين المحليين ({{ count }})",
+
+'publication.page.publisherArabicEdition':'الناشر للطبعة العربية',
+'relationships.isArabicPublisherOf.OrgUnit':'الناشرين للطبعة العربية',
+'item.page.relationships.isArabicPublisherOfPublication':'الناشرين للطبعة العربية',
+"submission.sections.describe.relationship-lookup.title.isArabicPublisherOfPublication":'الناشرين للطبعة العربية',
+"submission.sections.describe.relationship-lookup.search-tab.tab-title.isArabicPublisherOfPublication":"الناشرين للطبعة العربية المحليين ({{ count }})",
+
+   
 }
 

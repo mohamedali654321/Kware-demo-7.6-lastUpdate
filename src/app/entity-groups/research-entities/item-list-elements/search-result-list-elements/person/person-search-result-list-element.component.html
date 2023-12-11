@@ -27,6 +27,8 @@
       <span *ngIf="linkType == linkTypes.None"
             class="lead"
             [innerHTML]="convertComma(dsoTitle) || ('person.listelement.no-title' | translate)"></span>
+            <a *ngIf="dso.hasMetadata('person.identifier.orcid')" href="https://sandbox.orcid.org/{{firstMetadataValue('person.identifier.orcid')}}"><img style="width: 22px;    margin-right: 10px;" _ngcontent-dspace-angular-c659="" placement="top" alt="orcid-logo" src="https://dspacecris7.4science.cloud/assets/images/orcid.logo.icon.svg" class="orcid-icon ng-star-inserted"></a>
+
             <ds-publictaion-count  [dso]="dso"></ds-publictaion-count>
 
       <span class="text-muted">
@@ -42,6 +44,26 @@
         </ds-truncatable-part>
         
   </span>
+
+  <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
+    <div *ngIf="dso.allMetadata(['person.contributor.other']).length > 0">
+      <span style="color: #2666ab !important ;font-size: .9rem;font-weight:normal;" [innerHtml]="firstMetadataValue('person.contributor.other') | kwareTranslate"></span>
+
+    </div>
+  </ds-truncatable-part>
+
+  <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
+    <div *ngIf="dso.allMetadata(['organization.childLegalName']).length > 0">
+      <span style="color: #2666ab !important ;font-size: .9rem;font-weight:normal;" [innerHtml]="firstMetadataValue('organization.childLegalName') | kwareTranslate"></span>
+
+    </div>
+  </ds-truncatable-part>
+  <ds-truncatable-part [id]="dso.id" [minLines]="1"  >
+    <div *ngIf="dso.allMetadata(['place.legalName']).length > 0">
+      <span style="color: #2666ab !important ;font-size: .9rem;font-weight:normal;" [innerHtml]="firstMetadataValue('place.legalName') | kwareTranslate"></span>
+
+    </div>
+  </ds-truncatable-part>
   <p *ngIf="dso.hasMetadata('person.jobTitle.description')" class="item-jobtitle card-text">
     <ds-truncatable-part [id]="dso.id" [minLines]="3">
       <!-- kware-edit kwareTranslatePipe -->

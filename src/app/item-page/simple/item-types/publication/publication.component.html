@@ -143,6 +143,44 @@
     [label]="'item.page.advisor' | translate">
   </ds-metadata-representation-list>
 
+
+  <!-- <ds-generic-item-page-field [item]="object"
+  [fields]="['dc.contributor.translator']"
+  [label]="'item.page.translator'">
+  </ds-generic-item-page-field> -->
+
+  <!-- <ds-generic-item-page-field [item]="object"
+  [fields]="['dc.contributor.reviewer']"
+  [label]="'item.page.reviewer'">
+  </ds-generic-item-page-field> -->
+
+  <!-- <ds-generic-item-page-field [item]="object"
+  [fields]="['dc.contributor.presenter']"
+  [label]="'item.page.presenter'">
+  </ds-generic-item-page-field> -->
+
+  <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+  [parentItem]="object"
+  [itemType]="'Person'"
+  [metadataFields]="['dc.contributor.translator']"
+  [label]="'item.page.translator' | translate">
+</ds-metadata-representation-list>
+
+<ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+[parentItem]="object"
+[itemType]="'Person'"
+[metadataFields]="['dc.contributor.reviewer']"
+[label]="'item.page.reviewer' | translate">
+</ds-metadata-representation-list>
+
+<ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+[parentItem]="object"
+[itemType]="'Person'"
+[metadataFields]="['dc.contributor.presenter']"
+[label]="'item.page.presenter' | translate">
+</ds-metadata-representation-list>
+  
+
   <!-- <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
   [parentItem]="object"
   [itemType]="'Person'"
@@ -175,16 +213,33 @@
       [fields]="['journalvolume.identifier.name']"
       [label]="'publication.page.volume-title'">
     </ds-generic-item-page-field> -->
-
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.identifier.isbn']"
+      [label]="'item.page.isbn'">
+    </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
     [fields]="['dc.source']"
     [label]="'item.page.source'">
     </ds-generic-item-page-field>
 
-    <ds-generic-item-page-field [item]="object"
+    <!-- <ds-generic-item-page-field [item]="object"
       [fields]="['dc.publisher']"
       [label]="'publication.page.publisher'">
-    </ds-generic-item-page-field>
+    </ds-generic-item-page-field> -->
+
+    <ds-metadata-representation-list 
+    [parentItem]="object"
+    [itemType]="'OrgUnit'"
+    [metadataFields]="['dc.publisher']"
+    [label]="'publication.page.publisher' | translate">
+  </ds-metadata-representation-list>
+
+  <ds-metadata-representation-list 
+  [parentItem]="object"
+  [itemType]="'OrgUnit'"
+  [metadataFields]="['dc.publisher.arabicedition']"
+  [label]="'publication.page.publisherArabicEdition' | translate">
+</ds-metadata-representation-list>
   </div>
   <div class="col-xs-12 col-md-8">
        <!-- mohamed start edit -->

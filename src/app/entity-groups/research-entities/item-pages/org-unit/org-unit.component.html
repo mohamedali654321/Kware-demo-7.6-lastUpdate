@@ -227,7 +227,13 @@
   </div>
   <div class="mt-5 w-100">
     <ds-tabbed-related-entities-search [item]="object"
-      [relationTypes]="[{
+      [relationTypes]="[
+        {
+      label: 'isPublisherOfPublication',
+      filter: 'isPublisherOfPublication',
+      configuration: 'default-relationships'
+      },
+        {
       label: 'isOrgUnitOfPerson',
       filter: 'isOrgUnitOfPerson',
       configuration: 'person-relationships'

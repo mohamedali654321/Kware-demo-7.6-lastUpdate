@@ -124,8 +124,10 @@ h6{
 .ribbon-1 {
   color: #fff !important;
   position: fixed;
-  background: #530a86 !important;
-  box-shadow: 0 0 0 999px #530a86 !important;
+  background: red !important;
+  box-shadow: 0 0 0 999px red !important;
+  // background: #6c183b !important;
+  // box-shadow: 0 0 0 999px #6c183b !important;
   clip-path: inset(0 -100%);
 }
 .left {
